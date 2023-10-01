@@ -1,32 +1,34 @@
 
+import { NavLink } from "react-router-dom";
 import CartWidget from "../CartWidget/CartWidget";
 import "./Navbar.css";
-import { AppBar, Button, Toolbar, Typography, makeStyles } from '@mui/material';
+import { AppBar,Button,Toolbar, Typography} from '@mui/material';
 
 const Navbar = () => {
     return (
         <AppBar sx={{position:"fixed", background:"#212529"}}>
             <Toolbar sx={{display:"flex", alignItems:"center", justifyContent:"space-between"}}>
-                
-                <Typography variant="h4" sx={{ color: "aliceblue", fontFamily:'Poppins'}}>
+            <Typography variant="h4" sx={{ color: "aliceblue", fontFamily:'Poppins'}}>
                     HLo
                 </Typography>
-
-                <div style={{width: "25%",display:"flex" ,justifyContent:"space-around" }}>
+                <NavLink className="navbar-link" to ="/">
                     <Button variant="outlined" href="#" sx={{ borderRadius: "50px",color: "aliceblue",fontFamily:'Poppins'}}>
                         Home
                     </Button>
-                    <Button variant="outlined" href="#" sx={{ borderRadius: "50px",color: "aliceblue",fontFamily:'Poppins' }}>
-                        About
+                </NavLink>
+                <NavLink className="navbar-link" to ="/products">
+                    <Button variant="outlined" href="#" sx={{borderRadius: "50px",color: "aliceblue",fontFamily:'Poppins'}}>
+                        Productos
                     </Button>
-                    <Button variant="outlined" href="#" sx={{ borderRadius: "50px",color: "aliceblue",fontFamily:'Poppins' }}>
-                        Contact
+                </NavLink>
+                <NavLink className="navbar-link" to ="/categories">
+                    <Button variant="outlined" href="#" sx={{ borderRadius: "50px",color: "aliceblue",fontFamily:'Poppins'}}>
+                        Categorias
                     </Button>
-                </div>
+                </NavLink>
                 <div style={{display:"flex", alignItems:"center"}}>
                     <CartWidget/>
                 </div>
-
             </Toolbar>
         </AppBar>
     );

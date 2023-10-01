@@ -1,0 +1,113 @@
+[
+    {
+        "id": 1,
+        "nombre": "Camisa Cuadriculada",
+        "precio": 4000,
+        "img": "https://www.muji.us/cdn/shop/files/4550583362157_07_org.jpg?v=1692915089&width=512",
+        "stock": 30,
+        "cantidad":1,
+        "categoria": "Camisas"
+        
+    },
+    {
+        "id": 2,
+        "nombre": "Piloto Verde Musgo",
+        "precio": 4000,
+        "img": "https://www.muji.us/cdn/shop/files/4550583222918_org_700x.jpg?v=1692296254",
+        "stock": 30,
+        "cantidad":1,
+        "categoria": "Pilotos"
+    },
+    {
+        "id": 3,
+        "nombre": "Zapatillas Azul Marino",
+        "precio": 5500,
+        "img": "https://www.muji.us/cdn/shop/files/4550512980537_01_org_700x.jpg?v=1693345139",
+        "stock": 20,
+        "cantidad":1,
+        "categoria": "Zapatillas"
+    },
+    {
+        "id": 4,
+        "nombre": "Orejeras Felpudas",
+        "precio": 6000,
+        "img": "https://www.muji.us/cdn/shop/files/4550583063474_org_a48d82d1-2e9b-42bf-ada3-79679d4e3cf7_700x.jpg?v=1695834254",
+        "stock": 15,
+        "cantidad":1,
+        "categoria": "Accesorios Invierno"
+    },
+    {
+        "id": 5,
+        "nombre": "Piluso Gris",
+        "precio": 7990,
+        "img": "https://www.muji.us/cdn/shop/files/4550583063337_org_700x.jpg?v=1694543263",
+        "stock": 10,
+        "cantidad":1,
+        "categoria": "Accesorios Invierno"
+    },
+    {
+        "id": 6,
+        "nombre": "Pantalon Blanco",
+        "precio": 7990,
+        "img": "https://www.muji.us/cdn/shop/products/4550512680802_org_700x.jpg?v=1676409485",
+        "stock": 10,
+        "cantidad":1,
+        "categoria": "Pantalones"
+    },
+    {
+        "id": 7,
+        "nombre": "Medias Bordó",
+        "precio": 2700,
+        "img": "https://www.muji.us/cdn/shop/files/4550583196905_org_700x.jpg?v=1691192037",
+        "stock": 50,
+        "cantidad":1,
+        "categoria": "Accesorios Invierno"
+    },
+    {
+        "id": 8,
+        "nombre": "Saco Invierno Gris",
+        "precio": 2700,
+        "img": "https://www.muji.us/cdn/shop/files/4550583225544_01_org_700x.jpg?v=1694536937",
+        "stock": 50,
+        "cantidad":1,
+        "categoria": "Abrigados"
+    },
+    {
+        "id": 9,
+        "nombre": "Medias Invierno Rosa",
+        "precio": 3000,
+        "img": "https://www.muji.us/cdn/shop/products/4550512680802_org_700x.jpg?v=1676409485",
+        "stock": 35,
+        "cantidad":1,
+        "categoria": "Accesorios Invierno"
+    },
+    {
+        "id": 10,
+        "nombre": "Cardigan Marron Opaco",
+        "precio": 7990,
+        "img": "https://www.muji.us/cdn/shop/files/4550583279653_05_org_700x.jpg?v=1694720014",
+        "stock": 10,
+        "cantidad":1,
+        "categoria": "Abrigados"
+    },
+    {
+        "id": 11,
+        "nombre": "Pollera Negra",
+        "precio": 9000,
+        "img": "https://www.muji.us/cdn/shop/files/4550583032005_08_org_700x.jpg?v=1696032478",
+        "stock": 15,
+        "cantidad":1,
+        "categoria": "Pantalones"
+    },
+    {
+        "id": 12,
+        "nombre": "Remera Cremita",
+        "precio": 5000,
+        "img": "https://www.muji.us/cdn/shop/products/4550512434405_07_1260_700x.jpg?v=1665682452",
+        "stock": 25,
+        "cantidad":1,
+        "categoria": "Remeras"
+    }
+    
+
+]
