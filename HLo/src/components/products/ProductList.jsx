@@ -1,9 +1,16 @@
-import { Button, CircularProgress, Grid, Typography } from "@mui/material";
+import {CircularProgress, Grid, Typography } from "@mui/material";
 import useAsyncMock from "../../hooks/useAsyncMock";
 import products from "../../mocks/products.json"
 import ProductDetail from "./ProductDetail";
-const ProductList= ()=>{
-    const {data, loading} = useAsyncMock(products)
+const ProductList= (props)=>{
+
+    const {selectedCategory} =props;
+
+    const filteredProducts=products.filter((product)=>{
+        return selectedCategory ==="all" || product.categoria === selectedCategory
+    })
+
+    const {loading} = useAsyncMock(products)
 
     if (loading){
         return <CircularProgress/>
@@ -11,15 +18,13 @@ const ProductList= ()=>{
 
     return ( 
         <div className="productos">
-            <Typography variant="h2" style={{color :"#8F8C8C"}}>
-                Productos
+            <Typography variant="h2" style={{color :"#8F8C8C", paddingTop:"30px"}}>
             </Typography>
             <Grid container spacing={4} className="container">
                 {
-                    data.map((product)=>{
+                    filteredProducts.map((product)=>{
                         return(
-                            <ProductDetail key={product.id} product={product}>
-                            </ProductDetail>
+                            <ProductDetail key={product.id} product={product}/>
                         )
                     })
                 }

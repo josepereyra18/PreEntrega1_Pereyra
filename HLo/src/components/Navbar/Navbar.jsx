@@ -21,11 +21,6 @@ const Navbar = () => {
                         Productos
                     </Button>
                 </NavLink>
-                <NavLink className="navbar-link" to ="/categories">
-                    <Button variant="outlined" href="#" sx={{ borderRadius: "50px",color: "aliceblue",fontFamily:'Poppins'}}>
-                        Categorias
-                    </Button>
-                </NavLink>
                 <div style={{display:"flex", alignItems:"center"}}>
                     <CartWidget/>
                 </div>
