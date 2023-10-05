@@ -4,7 +4,7 @@
 
 .card-products-container{
     width: 350px;
-
+    text-decoration: none;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -43,6 +43,18 @@
     justify-content: center;
     margin: 10px;
 }
-.productos{
+.mockFilter{
     padding-top: 80px;
+}
+.categoriaProductos{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    color :#8F8C8C
+}
+.ItemDetailContainer{
+    padding-top: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }

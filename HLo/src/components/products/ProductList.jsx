@@ -1,14 +1,13 @@
-import {CircularProgress, Grid, Typography } from "@mui/material";
+
+import {CircularProgress, Grid} from "@mui/material";
 import useAsyncMock from "../../hooks/useAsyncMock";
 import products from "../../mocks/products.json"
-import ProductDetail from "./ProductDetail";
+import ProductDetail from "../products/ProductDetail";
+
 const ProductList= (props)=>{
 
     const {selectedCategory} =props;
-
-    const filteredProducts=products.filter((product)=>{
-        return selectedCategory ==="all" || product.categoria === selectedCategory
-    })
+    const filteredProducts = selectedCategory !== 'all' ? products.filter((product) => product.categoria === selectedCategory): products;
 
     const {loading} = useAsyncMock(products)
 
@@ -16,10 +15,8 @@ const ProductList= (props)=>{
         return <CircularProgress/>
     }
 
-    return ( 
+    return (
         <div className="productos">
-            <Typography variant="h2" style={{color :"#8F8C8C", paddingTop:"30px"}}>
-            </Typography>
             <Grid container spacing={4} className="container">
                 {
                     filteredProducts.map((product)=>{
@@ -32,5 +29,4 @@ const ProductList= (props)=>{
         </div>
     );
 }
-
 export default ProductList;

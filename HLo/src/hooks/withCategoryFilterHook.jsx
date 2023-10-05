@@ -1,4 +1,4 @@
-import { FormControl, InputLabel, MenuItem, Select } from "@mui/material";
+import { FormControl, InputLabel, MenuItem, Select, Typography } from "@mui/material";
 import { useState } from "react";
 
 function withCategoryFilterHook(WrappedComponent) {
@@ -8,7 +8,10 @@ function withCategoryFilterHook(WrappedComponent) {
             setSelectedCategory(e.target.value)
         }
         return (
-            <div>
+            <div className="mockFilter">
+                <Typography className="categoriaProductos" variant="h2">
+                    {selectedCategory === "all" ? "Todos los productos" : `Categoría: ${selectedCategory}`}
+                </Typography>
                 <FormControl>
                     <InputLabel>Filtrar por categoría</InputLabel>
                     <Select value={selectedCategory} onChange={handleSelectedCategory}>

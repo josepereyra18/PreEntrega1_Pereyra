@@ -16,9 +16,9 @@ const Navbar = () => {
                         Home
                     </Button>
                 </NavLink>
-                <NavLink className="navbar-link" to ="/products">
+                <NavLink className="navbar-link" to ="/category">
                     <Button variant="outlined" href="#" sx={{borderRadius: "50px",color: "aliceblue",fontFamily:'Poppins'}}>
-                        Productos
+                        Categorias
                     </Button>
                 </NavLink>
                 <div style={{display:"flex", alignItems:"center"}}>
