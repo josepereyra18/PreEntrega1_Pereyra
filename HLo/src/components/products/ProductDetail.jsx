@@ -10,7 +10,11 @@ const ProductDetail= ({product})=>{
                 <CardContent className="card-cardContent-container">
                     <Typography style={{color : "#8F8C8C"}}>{nombre}</Typography>
                     <Typography variant="h6" style={{color : "#8F8C8C"}}>$ {precio.toFixed(2)}</Typography>
-                    <Button variant="3">Agregar</Button>
+                    <div className="ProductDetail-Agregar-Modal">
+                        <Button variant="1">Agregar</Button>
+                        <Button variant="3">Ver</Button>
+                    </div>
+                    
                 </CardContent>
             </Card>
         </Grid>

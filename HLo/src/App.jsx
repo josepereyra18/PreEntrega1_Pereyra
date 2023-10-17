@@ -18,6 +18,7 @@ function App() {
         <Route exact path="/category" element= {<WithCategoryProducts/> }/>
         <Route exact path="/products/:productId" element={<ItenDetailContainer/>}/>
       </Routes>
+      <hola></hola>
     </Router>
   </>)
 }
