@@ -1,7 +1,6 @@
 import ItemListContainer from '../ItemListContainer/ItemListContainer'
 import ProductList from '../products/ProductList';
 import { useState } from 'react';
-import products from "../../mocks/products.json"
 
 
 const Home= ()=>{
@@ -10,7 +9,7 @@ const Home= ()=>{
     return (
         <div>
             <ItemListContainer greeting={greeting} />
-            <ProductList selectedCategory={selectedCategory} products={products} />
+            <ProductList selectedCategory={selectedCategory} />
         </div>
         
     );

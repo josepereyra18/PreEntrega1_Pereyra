@@ -1,32 +1,44 @@
+import { useEffect, useState } from 'react';
+import { CircularProgress, Grid } from '@mui/material';
+import { addDoc, collection, getFirestore, query, where, getDocs } from 'firebase/firestore'; // Importa los elementos necesarios de Firebase
+import ProductDetail from '../products/ProductDetail';
 
-import {CircularProgress, Grid} from "@mui/material";
-import useAsyncMock from "../../hooks/useAsyncMock";
-import products from "../../mocks/products.json"
-import ProductDetail from "../products/ProductDetail";
+const ProductList = (props) => {
+    const { selectedCategory } = props;
+    const [products, setProducts] = useState([]);
+    const [loading, setLoading] = useState(true);
 
-const ProductList= (props)=>{
+    useEffect(() => {
+        const fetchData = async () => {
+                const db = getFirestore();
+                const productsRef = collection(db, 'productos');
+                const q = selectedCategory !== 'all'
+                    ? query(productsRef, where('categoria', '==', selectedCategory))
+                    : productsRef;
 
-    const {selectedCategory} =props;
-    const filteredProducts = selectedCategory !== 'all' ? products.filter((product) => product.categoria === selectedCategory): products;
+                const snapshot = await getDocs(q);
+                const productData = snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
 
-    const {loading} = useAsyncMock(products)
+                setProducts(productData);
+                setLoading(false);
+        };
 
-    if (loading){
-        return <CircularProgress/>
+        fetchData();
+    }, [selectedCategory]);
+    console.log(products)
+    if (loading) {
+        return <CircularProgress />;
     }
 
     return (
         <div className="productos">
             <Grid container spacing={4} className="container">
-                {
-                    filteredProducts.map((product)=>{
-                        return(
-                            <ProductDetail key={product.id} product={product}/>
-                        )
-                    })
-                }
+                {products.map((product) => (
+                    <ProductDetail key={product.id} product={product} />
+                ))}
             </Grid>
         </div>
     );
-}
+};
+
 export default ProductList;

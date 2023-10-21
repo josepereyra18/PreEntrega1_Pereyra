@@ -1,3 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,300;0,400;1,500&family=Poppins:wght@600&display=swap');
+
+.agregarDisminuir{
+    font-family:'Poppins';
+    display: flex;
+    justify-content: center;
+    align-items:center ;
+}
 .card-product-img{
     width: 370px;
 }
@@ -62,4 +70,67 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.Modal-Content{
+    width: fit-content;
+    padding: 13px;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Modal-Info{
+    padding: 11px;
+    height: 245px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.Modal-Img{
+    margin: 5px;
+}
+
+.Modal-Img{
+    width: 250px;
+    border-radius: 10px;
+
+}
+.Modal-detail{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.Cart-content{
+    padding-top: 70px;
+}
+
+.CartImg{
+    width: 70px;
+    border-radius: 5px;
+}
+
+.Page-Content{
+    display: flex;
+    justify-content: space-around;
+    width: 1000px;
+}
+.Page-container{
+    width: 500px;
+}
+.Page-container-detail{
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.CO-container{
+    padding-top: 70px;
 }
